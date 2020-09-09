@@ -2,7 +2,7 @@
 <head>
     <style>
     .frontPageBody {
-      background-color: #3e3e3e;
+      background-color: #282828;
       color: white;
       margin: 20px;
       padding: 20px;
@@ -11,22 +11,51 @@
         background: url("/Website/Css/assets/valorantCard");
         background-position:center;
         background-repeat:no-repeat;
-        width: 100px;
-        height: 100px;
+    
     }
+    .column {
+        float: left;
+        padding: 0 10px;
+}
+.container{
+  margin: auto;
+  width: 900px;
+  display:grid;
+  grid-template-columns: 50% 50%;
+  grid-row: auto auto;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+.box{
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:40px;
+    font-family:sans-serif;
+  }
     </style>
 </head>
-
-<body class="frontPageBody">
-<div>
-    <
-    <div id = "valorant_card">
-        <img style = "border-radius: 16px; width: 30%"src="../Css/assets/valorantCard.jpg"></img>
-    </div>
-
-    <div>
+<div id = "content">
+<body style = "width: 100%"  class="frontPageBody">
+    <div style = "margin: auto; width: 630px">
         
-    </div>
-</div>
+        <h1 style = "color: #E8E8E8; margin-top: 10px; display: inline-block;font-size: 70px; text-align: center; font-family: Arial, Helvetica, sans-serif; font-weight: 10000"> BattlePass Tracker</h1>
+      </div>
+    <div id = "valorant_card" class="container">
+        <div class="box">
+            <img style = "border-radius: 23px; height: 100%; width: 100%" src="../Css/assets/valorantCard.jpg"></img>
+        </div>
+        <div class="box">
+            <img style = "border-radius: 23px; height: 100%; width: 100%" src="../Css/assets/fallguysCard.png"></img>
+        </div>
+        <div class="box">
+            <img style = "border-radius: 23px; height: 100%; width: 100%" src="../Css/assets/warzoneCard.jpg"></img>
+        </div>
+        <div class="box">
+            <img style = "border-radius: 23px; height: 100%; width: 100%" src="../Css/assets/fortniteCard.png"></img>
+        </div>
+      </div>
 </body>
+</div>
 <script src="../Javascript/FrontPage.js"></script>
