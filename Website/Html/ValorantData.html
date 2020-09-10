@@ -1,8 +1,48 @@
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<head>
+    <style>
+        .frontPageBody {
+          background-color: #282828;
+          color: white;
+          margin: 20px;
+          padding: 20px;
+        }
+        input[type=number]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        }
+    </style>
+</head>
 
-
-<body style = "width: 100%">
-    <div style = "margin: auto; width: 630px">
-        
-        <h1 style = "color: #E8E8E8; margin-top: 10px; display: inline-block;font-size: 70px; text-align: center; font-family: Arial, Helvetica, sans-serif; font-weight: 10000"> BattlePass Tracker</h1>
-      </div>
+<body class = "frontPageBody">
+<div style = "background-color: #3a3a3a; font-family: Arial, Helvetica, sans-serif; border-radius: 16px; width:85%; height:100%; display: block; margin:auto">
+    <div style = "color: #eeeeee; border-radius: 16px 16px 0px 0px; padding-top: 5px; padding-left: 20px; padding-bottom: 4px; background-color: #5a5a5a; display: block">
+        Battle Pass Level: <input style = "color: #eeeeee; width: 40px; background-color: #3a3a3a;margin-right: 15px; outline-color: black;"type="number" id="Level">
+        XP Left In Level: <input style = "color: #eeeeee; width: 100px; background-color: #3a3a3a; margin-right: 10px;outline-color: black;"type="number" id="XP">
+        <button style = "background-color: #adadad; outline-color: black" onclick="myFunction()">Submit</button>
+    </div>
+    <canvas id="myChart"></canvas>
+</div>
 </body>
+
+<script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'line',
+
+    // The data for our dataset
+    data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [{
+            label: 'My First dataset',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [0, 10, 5, 2, 20, 30, 45]
+        }]
+    },
+
+    // Configuration options go here
+    options: {}
+});
+</script>
+<script src="../Javascript/ValorantData.js"></script>

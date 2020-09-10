@@ -1,6 +1,18 @@
 
+var battlePassLevel;
+var battlePassXP;
+var totalXP = 137200;
+var totalDays = 63;
+var currentDay = new Date(); 
+currentDay.getDate();
 
-document.getElementById("interestsButton").addEventListener("click", function(){
-    document.getElementById("mainPage").style = "display: block";
-    document.getElementById("queueCreator").style = "display: none";
-});
+
+function myFunction() {
+    battlePassLevel = document.getElementById("Level").value;
+    battlePassXP = document.getElementById("XP").value;
+    console.log(currentDay )
+}
+
+
+
+
