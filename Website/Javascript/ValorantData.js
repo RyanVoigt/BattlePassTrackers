@@ -140,6 +140,41 @@ function submitFunction() {
 });
 }
 
+function convertFunction() {
+    let cost = 0;
+    let _points = document.getElementById("points").value;
+
+    while (_points >= 11000) {
+        cost += 99.99;
+        _points -= 11000;
+    }
+    while (_points >= 5350) {
+        cost += 49.99;
+        _points -= 5350;
+    }
+    while (_points >= 3650) {
+        cost += 34.99;
+        _points -= 3650;
+    }
+    while (_points >= 2050) {
+        cost += 19.99;
+        _points -= 2050;
+    }
+    while (_points >= 1000) {
+        cost += 9.99;
+        _points -= 1000;
+    }
+    while (_points >= 475) {
+        cost += 4.99;
+        _points -= 475;
+    }
+    if (_points > 0) {
+        cost += 4.99;
+    }
+
+    document.getElementById("dollars").value = cost;
+}
+
 
 
 
