@@ -12,3 +12,15 @@
   .fontPageBody {
     background-color: black;
   }
+
+  .topBar {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    color: #eeeeee;
+    border-radius: 16px 16px 0px 0px;
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-bottom: 4px;
+    background-color: #5a5a5a;
+  }
